@@ -1,36 +1,31 @@
 import React from 'react';
-import style from './Table.module.css';
-import TableItem from "./TableItem/TableItem";
 import {connect} from "react-redux";
+import Table from "./Table";
+import {deleteItem, getTableItems} from "../../Redux/tableReducer";
+import {Redirect} from "react-router-dom";
 
-const Table = ({tableItems}) => {
-    return (
-        <div className={style.wrapper}>
-            <table className={style.table}>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Created At</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {tableItems.map(item => {
-                    return <TableItem key={item.id} description={item.description} title={item.title}
-                                      date={item.date} id={item.id}/>
-                })}
-                </tbody>
-            </table>
-        </div>
-    )
-};
+class TableContainer extends React.Component {
+    componentDidMount() {
+        this.props.getTableItems();
+    }
+
+    render() {
+        if (!this.props.isAuth) {
+            return <Redirect to='/login'/>
+        }
+        return (
+            <div>
+                <Table tableItems={this.props.tableItems} deleteItem={this.props.deleteItem}/>
+            </div>
+        )
+    }
+}
 
 const mapStateToProps = (state) => {
     return {
-        tableItems: state.table.tableItems
+        tableItems: state.table.tableItems,
+        isAuth: state.app.isAuth
     }
 };
 
-export default connect(mapStateToProps,{})(Table);
+export default connect(mapStateToProps, {getTableItems, deleteItem})(TableContainer);

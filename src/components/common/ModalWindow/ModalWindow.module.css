@@ -16,13 +16,14 @@
 }
 .modalHeader {
     height: 55px;
-    background-color: #e0e0e0;
+    background-color: dodgerblue;
     border-radius: 6px 6px 0 0;
     padding-left: 25px;
     line-height: 55px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 .modalBody {
     background-color: #fff;
@@ -30,21 +31,26 @@
     box-sizing: border-box;
     text-align: center;
 }
+.modalBody p {
+    margin-top: 0;
+    font-size: 18px;
+}
 .modalFooter {
-    background-color: #ececec;
+    background-color: dodgerblue;
     height: 45px;
     border-radius: 0 0 6px 6px;
     line-height: 45px;
     font-size: 14px;
     text-align: center;
     box-sizing: border-box;
+    color: white;
 }
 .closeBtn {
     font-size: 28px;
     cursor: pointer;
     margin-right: 20px;
-    color: #a7a8ab;
+    color: #d3d4d7;
 }
 .closeBtn:hover {
-    color: #2c2c2c;
+    color: white;
 }

@@ -1,48 +1,32 @@
-.login  {
-    width: 400px;
-    height: 210px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+.deleteForm {
+    width: 55%;
     margin: auto;
-    padding: 0 30px;
-    background-color: #efefef;
-    border-radius: 6px;
 }
-.login h2 {
-    color: dodgerblue;
-}
-.login form {
+.deleteForm input {
+    width: 70%;
     box-sizing: border-box;
-}
-.login input {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 10px;
     padding: 5px 10px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid lightgray;
 }
-.login button {
+.deleteForm button {
     width: 100px;
-    padding: 7px;
-    margin-top: 10px;
+    padding: 5px;
+    margin-left: 15px;
     border-radius: 15px;
     border: none;
     background-color: dodgerblue;
     color: white;
     font-size: 18px;
     cursor: pointer;
+    outline: none;
 }
 .error {
     height: 60px;
     width: 100%;
+    margin: auto;
+    margin-top: 15px;
     box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    top: -70px;
     padding: 0 20px;
     color: white;
     background-color: rgba(255, 0, 0, 0.8);

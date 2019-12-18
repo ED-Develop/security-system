@@ -1,0 +1,30 @@
+.logo {
+    font-size: 24px;
+    font-style: italic;
+    color: white;
+    line-height: 50px;
+}
+.logo span {
+    font-weight: bold;
+    font-style: normal;
+}
+.header {
+
+    background-color: dodgerblue;
+    height: 50px;
+}
+.wrapper {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper a {
+    text-decoration: none;
+    color: white;
+}
+.wrapper .login a {
+    font-size: 22px;
+    cursor: pointer;
+}
